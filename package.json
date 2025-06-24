@@ -1,6 +1,6 @@
 {
-  "name": "daily-report",
-  "version": "1.0.0",
+  "name": "@mukaigawara/daily-report",
+  "version": "1.0.0-alpha.1",
   "description": "GitコミットログからDailyReportを生成するCLIツール",
   "type": "module",
   "main": "dist/cli.js",
@@ -11,16 +11,35 @@
     "build": "tsc",
     "start": "tsx src/cli.tsx",
     "dev": "tsx src/cli.tsx",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["cli", "git", "daily-report", "commit-log"],
+  "author": "mukaigawara",
+  "license": "MIT",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "package.json"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/daily-report.git"
+  },
+  "homepage": "https://github.com/yourusername/daily-report#readme",
+  "bugs": {
+    "url": "https://github.com/yourusername/daily-report/issues"
+  },
   "dependencies": {
     "@types/node": "^24.0.3",
     "@types/react": "^19.1.8",
     "ink": "^6.0.0",
-    "react": "^19.1.0",
+    "react": "^19.1.0"
+  },
+  "devDependencies": {
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   }
